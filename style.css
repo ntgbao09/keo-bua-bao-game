@@ -92,3 +92,22 @@ body {
 .hand-image.active {
     display: block;
 }
+/* style.css */
+
+/* Ẩn giao diện chọn một cách mượt mà */
+.choices.hidden {
+    opacity: 0;
+    pointer-events: none; /* Ngăn người dùng nhấn lại */
+    transition: opacity 0.5s ease;
+    display: none; /* Ẩn hoàn toàn khỏi bố cục sau khi mờ dần */
+}
+
+/* Hiển thị vùng kết quả một cách mượt mà */
+.result-display {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s; /* Bắt đầu hiện sau khi các nút ẩn */
+}
+
+.result-display.visible {
+    opacity: 1;
+}
