@@ -50,3 +50,45 @@ body {
     font-weight: bold;
     margin-top: 20px;
 }
+/* ... style.css ... */
+
+/* ĐỊNH VỊ CONTAINER HÌNH ẢNH BÊN */
+.side-image-container {
+    position: fixed; /* Giữ vị trí cố định trên màn hình */
+    top: 50%; /* Căn giữa chiều dọc */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column; /* Hoặc có thể để trống nếu chỉ một hình ảnh hiển thị */
+    align-items: center;
+    opacity: 0; /* Ban đầu ẩn */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Chuyển cảnh mượt */
+    z-index: -1; /* Đặt dưới game-container chính để không đè lên nút */
+}
+
+.left-side {
+    left: 5%; /* Khoảng cách từ lề trái */
+    transform: translateY(-50%) translateX(-20px); /* Bắt đầu hơi lệch sang trái */
+}
+
+.right-side {
+    right: 5%; /* Khoảng cách từ lề phải */
+    transform: translateY(-50%) translateX(20px); /* Bắt đầu hơi lệch sang phải */
+}
+
+/* KHI CONTAINER ĐƯỢC HIỂN THỊ */
+.side-image-container.visible {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0); /* Trở về vị trí chính */
+}
+
+/* ẨN TẤT CẢ HÌNH ẢNH MẶC ĐỊNH */
+.hand-image {
+    display: none;
+    width: 250px; /* Điều chỉnh kích thước hình ảnh cho phù hợp */
+    height: auto;
+}
+
+/* KHI MỘT HÌNH ẢNH CỤ THỂ ĐƯỢC HIỂN THỊ */
+.hand-image.active {
+    display: block;
+}
