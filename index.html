@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi Kéo Búa Bao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Kéo - Búa - Bao</h1>
+        
+        <div class="choices">
+            <button onclick="playGame('keo')">✌️ Kéo</button>
+            <button onclick="playGame('bua')">✊ Búa</button>
+            <button onclick="playGame('bao')">✋ Bao</button>
+        </div>
+
+        <div class="result-display">
+            <p id="user-choice">Bạn chọn: -</p>
+            <p id="computer-choice">Máy chọn: -</p>
+            <h2 id="winner-text">Bắt đầu chơi nào!</h2>
+        </div>
+
+        <div class="score">
+            <p>Điểm của bạn: <span id="user-score">0</span></p>
+            <p>Điểm của máy: <span id="computer-score">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
