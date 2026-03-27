@@ -57,7 +57,7 @@ function hideAllImages() {
 }
 
 // CẬP NHẬT HÀM playGame(userChoice)
-function playGame(userChoice) {
+    function playGame(userChoice) {
     // 1. ẨN TẤT CẢ HÌNH ẢNH TRƯỚC KHI LƯỢT MỚI BẮT ĐẦU
     hideAllImages();
     
